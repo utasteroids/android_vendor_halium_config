@@ -42,6 +42,7 @@ PRODUCT_PACKAGES += \
     com.android.media.swcodec \
     com.android.mediaprovider \
     com.android.os.statsd \
+    com.android.tethering \
     crash_dump \
     debuggerd\
     device_config \
@@ -329,7 +330,7 @@ PRODUCT_PACKAGES_DEBUG_ASAN := \
 
 # Halium-specific packages
 PRODUCT_PACKAGES += \
-    android.system.net.netd@1.1-service.stub \
+    android.system.net.netd-service.stub \
     audio.hidl_compat.default \
     camera_service \
     libbiometry_fp_api \
