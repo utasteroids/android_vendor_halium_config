@@ -42,6 +42,7 @@ PRODUCT_PACKAGES += \
     com.android.media.swcodec \
     com.android.mediaprovider \
     com.android.os.statsd \
+    com.android.tethering \
     crash_dump \
     debuggerd\
     device_config \
