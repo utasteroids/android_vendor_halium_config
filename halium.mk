@@ -330,7 +330,6 @@ PRODUCT_PACKAGES_DEBUG_ASAN := \
 
 # Halium-specific packages
 PRODUCT_PACKAGES += \
-    android.system.net.netd@1.1-service.stub \
     audio.hidl_compat.default \
     camera_service \
     libbiometry_fp_api \
