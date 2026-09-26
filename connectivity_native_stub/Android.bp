@@ -1,0 +1,25 @@
+// Stand-in for the Tethering APEX's LLNDK library. Installed in /system_ext:
+// the system linker.config.pb auto-provides any stub-capable library found in
+// /system/lib64, which would clash with its requireLibs entry (see below).
+cc_library_shared {
+    name: "libcom.android.tethering.connectivity_native.halium_stub",
+    stem: "libcom.android.tethering.connectivity_native",
+    system_ext_specific: true,
+    srcs: ["connectivity_native_stub.c"],
+    cflags: [
+        "-Wall",
+        "-Werror",
+        "-fvisibility=hidden",
+    ],
+}
+
+// Lets linkerconfig give vendor processes the stub from the system namespace
+// (which also searches /system_ext). /system/etc/linker.config.pb cannot list
+// it: the build puts it there under requireLibs (LLNDK moved to an APEX), and
+// a library may not be both required and provided in one file. linkerconfig
+// merges the system_ext config into the system one.
+linker_config {
+    name: "connectivity_native_stub_linker_config",
+    src: "linker.config.json",
+    system_ext_specific: true,
+}

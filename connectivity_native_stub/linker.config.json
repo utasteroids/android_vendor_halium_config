@@ -1,0 +1,5 @@
+{
+  "provideLibs": [
+    "libcom.android.tethering.connectivity_native.so"
+  ]
+}

@@ -331,8 +331,10 @@ PRODUCT_PACKAGES_DEBUG_ASAN := \
 PRODUCT_PACKAGES += \
     audio.hidl_compat.default \
     camera_service \
+    connectivity_native_stub_linker_config \
     libbiometry_fp_api \
     libcamera_compat_layer \
+    libcom.android.tethering.connectivity_native.halium_stub \
     libdroidmedia \
     libhwc2_compat_layer \
     libmedia_compat_layer \
